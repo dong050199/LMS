@@ -1,0 +1,25 @@
+environment: dev
+mongo:
+  server: mongodb://mongoAdmin:ttsxtm@128.199.124.231:27017/Becanatomy?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
+  database: DONG_TEST
+  collection: order
+order:
+  BootStrapServer: 128.199.124.231:9092
+  GroupID: group-id-1
+  AutoOffsetReset: earliest
+  TopicConsumer: orderrequest
+  TopicProducer: orderreponse
+  Topic: Order
+gateway:
+  BootStrapServer: localhost:9092
+  GroupID: group-id-1
+  AutoOffsetReset: earliest
+  TopicConsumer: gatewayrequest
+  TopicProducer: gatewayreponse
+mes:
+  BootStrapServer: localhost:9092
+  GroupID: group-id-1
+  GroupID1: group-id-2
+  AutoOffsetReset: earliest
+  TopicConsumer: mesrequest
+  TopicProducer: mesreponse
